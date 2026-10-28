@@ -40,15 +40,18 @@ def render_builder():
         st.session_state.builder_groups = [{"id": 0, "terms": [0], "next_term": 1}]
         st.session_state.builder_next_group = 1
     st.subheader("Build your query")
-    st.caption("Combine included groups with AND or OR. Excluded groups are always removed from the combined result.")
-    st.caption("Enable Exact phrase for text containing spaces. Wildcards, proximity operators, and native field tags are available only in Single Database mode.")
+    instructions = (
+        "- Combine included groups with AND or OR. Excluded groups are always removed from the combined result.\n"
+        "- Enable Exact phrase for text containing spaces. Wildcards, proximity operators, and native field tags are available only in Single Database mode."
+    )
     validation_notice = st.empty()
-    combine = st.selectbox("Combine included groups", ["AND", "OR"], key="builder_combine")
+    with st.container(key="combine_groups_control"):
+        combine = st.selectbox("Combine included groups", ["AND", "OR"], key="builder_combine")
     groups = []
     for number, group in enumerate(st.session_state.builder_groups, start=1):
         identifier = group["id"]
         with st.container(border=True):
-            heading_column, remove_column = st.columns([6, 2], vertical_alignment="center")
+            heading_column, _, remove_column = st.columns([5, 2, 1.5], vertical_alignment="center")
             with heading_column:
                 st.markdown(f"**Group {number}**")
             with remove_column:
@@ -82,10 +85,12 @@ def render_builder():
             groups.append({"operator": operator, "exclude": exclude, "terms": terms})
     st.button("Add group", key="add_group", on_click=add_group)
     try:
-        return build_expression(groups, combine), ""
+        expression = build_expression(groups, combine)
     except ValueError as exc:
-        validation_notice.caption(str(exc))
+        validation_notice.caption(f"{instructions}\n- {exc}")
         return None, str(exc)
+    validation_notice.caption(instructions)
+    return expression, ""
 
 
 def display_results() -> None:
@@ -136,11 +141,12 @@ def display_results() -> None:
 def render_multi() -> None:
     st.subheader("Select databases")
     selected = []
-    columns = st.columns(2)
-    for index, database in enumerate(providers.MULTI_DATABASES):
-        with columns[index % 2]:
-            if st.checkbox(database, key=f"multi_select_{database}", on_change=clear_multi_result):
-                selected.append(database)
+    with st.container(key="database_selection"):
+        columns = st.columns(2)
+        for index, database in enumerate(providers.MULTI_DATABASES):
+            with columns[index % 2]:
+                if st.checkbox(database, key=f"multi_select_{database}", on_change=clear_multi_result, width="stretch"):
+                    selected.append(database)
     st.caption("Crossref and Springer Nature remain available in Single Database mode.")
     node, builder_error = render_builder()
     queries = {}
@@ -171,7 +177,8 @@ def render_multi() -> None:
             "Article limit per API", min_value=1, value=100, step=100,
             disabled=scope == "All results", key="multi_limit",
         )
-    st.caption("Sources run one at a time. Each source keeps its service limits: DOAJ 1,000, PubMed 10,000, arXiv 30,000; OpenAlex needs a key after its first page. Scopus needs cursor access beyond 5,000. CORE may take longer due to rate limits.")
+    with st.container(key="source_limits_note"):
+        st.caption("Sources run one at a time. Each source keeps its service limits: DOAJ 1,000, PubMed 10,000, arXiv 30,000; OpenAlex needs a key after its first page. Scopus needs cursor access beyond 5,000. CORE may take longer due to rate limits.")
     submitted = st.button(
         "Search selected databases", type="primary", width="stretch", key="search_multi", disabled=not selected,
     )

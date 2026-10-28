@@ -56,7 +56,7 @@ From the repository root, using Python 3.10 or newer:
 
 ```powershell
 python -m venv .venv
-.venv\Scripts\python -m pip install -r literature_mining_app/requirements.txt
+.venv\Scripts\python -m pip install -r requirements.txt
 .venv\Scripts\python -m streamlit run literature_mining_app/app.py
 ```
 
