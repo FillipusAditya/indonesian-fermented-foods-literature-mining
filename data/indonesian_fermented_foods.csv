@@ -1,0 +1,86 @@
+fermented_food,raw_material,fermentation_process,microorganism_present,references,regions
+Sayur asin,Mustard cabbage leaf,Lactic fermentation,"Lactobacillus farciminis, Lb. fermentum, Lb. namurensis, Lb. plantarum, Lb. helveticus, Lb. brevis, Lb. versmoldensis, Lb. casei, Lb. rhamnosus, Lb. fabifermentans, Lb. satsumensis; Leuconostoc mesenteroides, Lb. confusus, Lb. curvatus, Pediococcus pentosaceus, Lb. plantarum",10.1016/j.fshw.2015.06.001,
+Tempoyak,Flesh of durian (Durio zibethinus),Lactic fermentation,"Lb. plantarum, Lb. coryneformis, Lb. casei; Lb. plantarum, Lactobacillus sp., Weissella paramesenteroides, Pediococcus acidilactici; Enterococcus gallinarum, E. faecalis",10.1016/j.fshw.2015.06.001,
+Mandai,"Flesh of cempedak, a family of jack fruit (Arthocarphus champeden Spreg.)",Lactic fermentation,Lb. plantarum; P. pentosaceus,10.1016/j.fshw.2015.06.001,
+Tape starter culture,Rice flour,–,"P. pentosaceus, E. faecium, Lb. curvatus, W. confusa, W. paramesenteroides",10.1016/j.fshw.2015.06.001,
+Rice wine/rice tape,Glutinuous rice (steamed),Alcoholic fermentation,"P. pentosaceus, Weisella sp.",10.1016/j.fshw.2015.06.001,
+Growol,Cassava (raw),Lactic fermentation,"Lb. plantarum, Lb. rhamnosus",10.1016/j.fshw.2015.06.001,
+Tempe,Soybean,Mold fermentation,"Lb. fermentum, Lb. plantarum, P. pentosaceus, W. confusa, Lb. delbrueckii ssp. delbrueckii; Lb. plantarum",10.1016/j.fshw.2015.06.001,
+Soy sauce (kecap),Soybean,Mold fermentation followed by high salt fermentation (brine fermentation),Tetragenococcus halophillus,10.1016/j.fshw.2015.06.001,
+Bakasang,Fish,High salt fermentation,P. acidilactici,10.1016/j.fshw.2015.06.001,
+Urutan (traditional Balinese sausage),Lean Pork,Lactic fermentation,"Lb. plantarum, P. acidilactici, Lb. farciminis",10.1016/j.fshw.2015.06.001,
+Dadih,Buffalo milk,Lactic fermentation,"Leu. mesenteroides; Lactococcus lactis subsp. lactis, Lb. brevis, Leu. mesenteroides, Lb. casei; Lb. plantarum, E. faecium; Lb. fermentum, Leu. lactis subsp. lactis; Lc. lactis, Lb. rhamnosus",10.1016/j.fshw.2015.06.001,
+Fermented mare milk,Mare milk,Lactic fermentation,"Lb. rhamnosus, Lb. fermentum; Lb. acidophilus, Lb. brevis",10.1016/j.fshw.2015.06.001,
+Tempe,Soybeans,"Lactic acid fermentation during soaking, followed by solid-state mold fermentation",Rz. oligosporus,10.1007/978-81-322-2800-4_14,
+Oncom,"Soybean, peanut",Solid-state mold fermentation,"N. sitophila, Rz. oligosporus",10.1007/978-81-322-2800-4_14,
+Gembus,Soybean (solid tofu residue),Solid-state mold fermentation,Rz. oligosporus,10.1007/978-81-322-2800-4_14,
+Kecap,Soybean,Solid-state mold (koji) fermentation followed by brine fermentation,"A. oryzae, A. sojae, Rz. oryzae, Rz. oligosporus",10.1007/978-81-322-2800-4_14,
+Acar,Vegetables,Lactic acid fermentation in brine,Lb. plantarum,10.1007/978-81-322-2800-4_14,
+Sayur asin,Mustard cabbage leaves,Spontaneous lactic acid fermentation in salt brine,"Lb. plantarum, Leu. mesenteroides, Lb. confusus, Lb. curvatus, P. pentosaceus",10.1007/978-81-322-2800-4_14,
+Tauco,Soybean,Mold fermentation followed by brine fermentation,"R. oligosporus, Rz. oryzae, A. oryzae, Lb. delbrueckii, Hansenula sp.",10.1007/978-81-322-2800-4_14,
+Tempoyak,Flesh of durian (Durio zibethinus),Spontaneous lactic acid fermentation,"Ent. gallinarum UP-9, Ent. faecalis UP-11, Oenococcus, Leuconostoc, Enterococcus, Lactococcus, Pediococcus acidilactici, Lactobacillus, Leuconostoc sp.",10.1007/978-81-322-2800-4_14,
+Mandai,Inner part of cempedak or jackfruit peel,Spontaneous lactic acid fermentation in brine,"P. pentosaceus, Lb. plantarum, Lb. pentosus",10.1007/978-81-322-2800-4_14,
+Brem,"Cassava, glutinous rice",Ragi-based fermentation followed by alcoholic fermentation,"Rz. oryzae, M. rouxii, A. oryzae, S. cerevisiae, Acetobacter aceti",10.1007/978-81-322-2800-4_14,
+Tuak,"Palm sap (Arenga pinnata, Nypa fruticans)",Spontaneous alcoholic fermentation of palm sap,"S. cerevisiae, C. tropicalis",10.1007/978-81-322-2800-4_14,
+Dadih,Buffalo milk,Spontaneous lactic acid fermentation,"Lac. lactis subsp. lactis, Lb. brevis, Lb. plantarum, Lb. casei, Lb. paracasei, Leu. mesenteroides",10.1007/978-81-322-2800-4_14,
+Urutan,Pork meat,Spontaneous lactic acid fermentation during drying,"Lb. plantarum, Lb. farciminis, obligate heterofermentative lactobacilli Lb. fermentum and Lb. hilgardii, P. acidilactici, P. pentosaceus",10.1007/978-81-322-2800-4_14,
+Peda,Fish,Two-stage high-salt fermentation,"Lb. plantarum, Lb. curvatus, Lb. murinus, Strep. thermophilus",10.1007/978-81-322-2800-4_14,
+Terasi,"Fish, shrimp",Spontaneous high-salt fermentation,"Bacillus sp., Pseudomonas sp.",10.1007/978-81-322-2800-4_14,
+Telur asin,Duck egg,Salt-curing (classified as alkaline fermentation in the source),"Lb. plantarum, Lb. casei subsp. rhamnosus, Enterococcus gallinarum, P. acidilactici",10.1007/978-81-322-2800-4_14,
+Tape,"Cassava, glutinous rice",Mixed-culture starch saccharification followed by alcoholic fermentation,"Rz. oryzae, M. rouxii, A. oryzae, S. cerevisiae, E. burtonii, H. anomala, P. pentosaceus, Lb. plantarum, Lb. fermentum",10.1007/978-81-322-2800-4_14,
+Growol,Cassava (raw),Spontaneous fermentation during cassava soaking,"Coryneform, Streptococcus, Bacillus, Actinobacteria, Lactobacillus, yeast",10.1007/978-81-322-2800-4_14,
+Gatot,Cassava (dried),Spontaneous fermentation of dried cassava,"P. pentosaceus, Saccharomyces sp. TR7, Lb. plantarum 250 Mut7 FNCC",10.1007/978-81-322-2800-4_14,
+Dadih,Buffalo milk,,"Leuconostoc mesenteroides, Enterococcus faecalis, Streptococcus lactis supsp. lactis, Streptococcus cremoris, Lactobacillus casei subsp. casei, Lactobacillus casei subsp. rhamnosus",10.3389/fmicb.2016.00377,
+Tape Ketan,"Glutinous rice, Ragi",,"Thizopus sp., Chlamydomucor sp., Candida sp., Endomycopsis sp., Saccharomyces sp.",10.3389/fmicb.2016.00377,
+Sayur asin,"Mustard leaves, cabbage, salt, coconut",,"Leuconostoc mesenteroides, Lactobacillus plantarum, Lactobacillus brevis, Lactobacillus confuses, Pediococcus pentosaceus",10.3389/fmicb.2016.00377,
+Kecap,"Soybean, wheat",,"Rhizopus oligosporus, Rhizopus oryzae, Aspergillus oryzae, Pediococcus halophilus, Staphylococcus sp., Candida sp., Debaromyces sp., Sterigmatomyces sp.",10.3389/fmicb.2016.00377,
+Ketjap,Soybean (black),,"Aspergillus oryzae, Aspergillus flavus, Rhizopus oligosporus, Rhizopus arrhizus",10.3389/fmicb.2016.00377,
+Oncom Hitam (Black Oncom) and Oncom Merah (Orange Oncom),"Peanut press cake, tapioca, soybean curd starter",,"Neurospora intermedia, Neurospora crassa, Neurospora sitophila (from red oncom); Rhizopus oligosporus (from black oncom)",10.3389/fmicb.2016.00377,
+Tauco,Soybean,Alkaline fermentation,"Rhizopus oryzae, Rhizopus ologosporus, Aspergillus oryzae, Zygosaccharomyces soyae, Bacillus sp., Enterococcus hermanniensis, Lactobacillus agilis, Lactobacillus brevis, Lactobacillus buchneri, Lactobacillus crispatus, Lactobacillus curvatus, Lactobacillus delbrueckii, Lactobacillus farciminis, Lactobacillus fermentum, Lactobacillus pantheris, Lactobacillus salivarius, Lactobacillus vaccinostercus, Lactococcus lactis, Lactococcus sp., Leuconostoc camosum, Leuconostoc citreum, Leuconostoc fallax, Leuconostoc lactis, Leuconostoc mesenteroides, Leuconostoc pseudomesenteroides, Pediococcus acidilactici, Streptococcus bovis, Streptococcus macedonicus, Weissella cibaria, Weissella confusa, Weissella paramesenteroides, Weissella soli",10.3389/fmicb.2016.00377,
+Tempe,Soybean,Alkaline fermentation,"Rhizopus oligisporus, Rhizopus arrhizus, Rhizopus oryzae, Rhizopus stolonifer, Aspergillus niger, Citrobacter freundii, Enterobacter cloacae, Klebsiella pneumoniae, Klebsiella pneumoniae subsp. ozaenae, Pseudomas fluorescens, Lactobacillus fermentum, Lactobacillus lactis, Lactobacillus plantarum, Lactobacillus reuteri",10.3389/fmicb.2016.00377,
+Tapé,Cassava,,"Streptococcus sp., Rhizopus sp., Saccharomycopsis fibuligera",10.3389/fmicb.2016.00377,
+Bakasang,"Fish, shrimp",,"Pseudomonas, Enterobacter, Moraxella, Micrococcus, Streptococcus, Lactobacillus, Pseudomonas, Moraxella, Staphylococcus, Pediococcus spp.",10.3389/fmicb.2016.00377,
+Patis,"Stolephorus sp., Clupea sp., Decapterus sp., Leionathus sp., salt",,"Pediococcus halophilus, Micrococcus sp., Halobacterium sp., Halococcus sp., Bacillus sp.",10.3389/fmicb.2016.00377,
+Inasua,"Parrotfish (Scarus ghobban), skipjack (Katsuwonus pelamis), Tiger bass (Terapon jarbua), Trevaly fish (Charanx ignobilis), yellowtail (Caesio erythrogaster)",Fermentation with 20-30% salt for 3 months,"Lactobacillus sp., Lactobacillus plantarum, Leuconostoc mesenteroides, Lactobacillus paracasei, Staphylococcus epidermidis",10.1016/j.fbio.2024.104629,Maluku
+Peda,"Puffer fish (Rastrelliger), kite (Decapterus), petek (Leiognathus equulus)",Fermentation with 20-30% salt for 1-2 weeks,Aerococcus sp.,10.1016/j.fbio.2024.104629,Java
+Jambal Roti,Manyung fish (Arius thalassinus),Fermentation with 30% salt for 6 days,"Pediococcus pentosaceus, Pediococcus acidilactici, Lactobacillus plantarum",10.1016/j.fbio.2024.104629,Central Java
+Lemea,"Common carp (Cyprinus carpio), mahseer (Tor spp.), saluang (Rasbora spp.)",Fermentation with 5% salt for 3-7 days,Leuconostoc sp.,10.1016/j.fbio.2024.104629,Bengkulu
+Bekasam,"Tawes (Barbonymus gonionotus), mujair (Oreochromis mossambicus)",Fermentation with >10% salt for 2-3 weeks or 12 months,"Lactobacillus plantarum, Lactobacillus pentosus, Pediococcus pentosaceus",10.1016/j.fbio.2024.104629,Kalimantan
+Wadi,Freshwater bawal fish (Bramidae),Fermentation with 10% salt for 3-5 days,"Lactobacillus coryniformis, Lactobacillus casei, Streptococcus lactis, Nitrococcus mobilis",10.1016/j.fbio.2024.104629,Kalimantan
+Naniura,Common Carp (Cyprinus carpio),Fermentation with 1% salt for 4-5 hours,"Lactobacillus fermentum, Aneurinibacillus aneurinilyticus",10.1016/j.fbio.2024.104629,North Sumatra
+Bakasang,Sardine (Sardina pilchardus),Fermentation with 10-20% salt for 40 days,"Micrococcus, Streptococcus, Pediococcus sp., Lactobacillus sp., Bacillus sp., Eubacterium sp., Bifidobacterium sp.",10.1016/j.fbio.2024.104629,North Sulawesi
+Cincalok,Shrimp (Penaeidae and Sergestidae),Fermentation with 10% salt for 3-7 days,,10.1016/j.fbio.2024.104629,West Kalimantan
+Chao,Anchovies (Stolephorus commersonii),Fermentation with 15-20% salt for 12 days,"Lactobacillus plantarum, Pediococcus pentosaceus, Lactobacillus pentosus, Pediococcus stilesii, Pediococcus acidilactici, Pediococcus claussenii",10.1016/j.fbio.2024.104629,South Sulawesi
+Rusip,Anchovies (Stolephorus commersonii),Fermentation with 10-25% salt for 7-14 days,"Lactobacillus plantarum, Leuconostoc spp., Streptococcus spp., Lactococcus spp.",10.1016/j.fbio.2024.104629,Bangka Belitung Islands
+Fish sauce,Tuna (Euthynnus affinis),Fermentation with 23.28% salt for 4-12 months,"Lactobacillus acidophilus, Lactobacillus plantarum, Lactobacillus bulgaricus, Streptococcus thermophillus, Streptococcus lactis, Streptococcus cremoris, Pediococcus pentosaceus",10.1016/j.fbio.2024.104629,North Sulawesi
+Terasi,Shrimp (Mysis relicta),Fermentation with 12-20% salt for 7-10 days,"Enterococcus faecalis, Weissella cibaria",10.1016/j.fbio.2024.104629,West Java
+Joruk,,Fermentation with 10% salt for 7 days,,10.1016/j.fbio.2024.104629,South Sumatera
+Tapai ketan,Glutinous rice,Cooked substrate inoculated with ragi; anaerobic fermentation in a closed container for 1-2 days,"Aspergillus oryzae, Rhizopus oryzae, Amylomyces rouxii, Mucor sp., Saccharomyces cerevisiae, Saccharomyces fibuliger, Endomycopsis burtonii; bacteria (unspecified)",10.1186/s42779-024-00241-7,
+Peuyeum or tapai singkong,Cassava tuber,Cooked substrate inoculated with ragi; anaerobic fermentation in a closed container for 1-2 days,"Aspergillus oryzae, Rhizopus oryzae, Amylomyces rouxii, Mucor sp., Saccharomyces cerevisiae, Saccharomyces fibuliger, Endomycopsis burtonii; bacteria (unspecified)",10.1186/s42779-024-00241-7,West Java
+Air tapai (tapai water),Cassava tuber,Continued fermentation of tapai; extraction of the alcohol-containing liquid,Molds and yeasts,10.1186/s42779-024-00241-7,
+Arak,Coconut sap,Alcoholic fermentation followed by distillation,Yeasts,10.1186/s42779-024-00241-7,Bali
+Tuak,Sugar palm (Arenga pinnata) sap,Alcoholic fermentation of plant sap,Yeasts,10.1186/s42779-024-00241-7,Bali
+Ciu,Sugar cane (cane sugar),Alcoholic fermentation of sugar cane,Yeasts,10.1186/s42779-024-00241-7,Java
+Brem (rice wine),"Rice, glutinous rice",Amylolytic fermentation followed by alcoholic fermentation,Molds and yeasts,10.1186/s42779-024-00241-7,Bali
+Cuka,Rice wine,Aerobic acetic acid fermentation of rice wine,Acetic acid bacteria,10.1186/s42779-024-00241-7,
+Sayur asin,Mustard greens,Lactic acid fermentation,Lactic acid bacteria,10.1186/s42779-024-00241-7,
+Tempoyak,Durian (Durio zibethinus) flesh,Lactic acid fermentation with 2-15% salt in an enclosed jar for 7 days at room temperature,"Lactobacillus plantarum, Lactobacillus coryneformis, Lactobacillus casei, Pediococcus acidilactici, Lactobacillus durianis, Leuconostoc durionis",10.1186/s42779-024-00241-7,Southern Sumatra
+Non-soybean tempeh,"Mungbeans, peanuts, kidney beans, black-eyed beans, winged beans, lamtoro (Leucaena leucocephala)",Aerobic mold fermentation in banana leaves for 2-3 days at room temperature,"Rhizopus oligosporus, Rhizopus oryzae",10.1186/s42779-024-00241-7,
+Dadih,Buffalo milk,Spontaneous fermentation of raw unheated milk in a bamboo tube capped with a banana leaf for about 2 days at room temperature,Lactic acid bacteria; Lactobacillus plantarum,10.1186/s42779-024-00241-7,West Sumatra
+Dangke cheese,Buffalo milk,,Lactic acid bacteria,10.1186/s42779-024-00241-7,South Sulawesi
+Dali ni horbo cheese,Buffalo milk,,Lactic acid bacteria,10.1186/s42779-024-00241-7,North Sumatra
+Bekamal,"Beef, goat, or lamb meat",Meat mixed with palm sugar and salt; fermentation in a closed earthenware jar for 7 days at room temperature,Lactic acid bacteria,10.1186/s42779-024-00241-7,"Banyuwangi, East Java"
+Urutan,"Pork, pork fat, salt, sugar, Balinese spices and herbs (base genep), pig intestine",Fermentation in pig intestine under the sun for 2-3 days,Lactic acid bacteria,10.1186/s42779-024-00241-7,Bali
+Civet coffee (kopi luwak),Coffee cherries,Fermentation in the gastrointestinal tract of the Asian palm civet (Paradoxurus hermaphroditus),Microflora in the digestive tract of the Asian palm civet (unspecified),10.1186/s42779-024-00241-7,
+Dage or oncom,"Edible press cake from soybean, peanut, coconut, or sesame oil extraction",Mold fermentation of edible press cake,"Mucor sp., Rhizopus oryzae, Neurospora crassa",10.1186/s42779-024-00241-7,
+Oncom hitam (black oncom),Peanut press cake,Mold fermentation,Rhizopus oligosporus,10.1186/s42779-024-00241-7,
+Oncom merah (red oncom),Soybean press cake,Mold fermentation,Neurospora crassa,10.1186/s42779-024-00241-7,
+Bongkrek,Coconut press cake,,,10.1186/s42779-024-00241-7,
+Telur asin,Duck egg,Salt curing in brine or a salted covering paste,"Lactobacillus plantarum, Lactobacillus casei subsp. rhamnosus, Enterococcus gallinarum, Pediococcus acidilactici",10.1186/s42779-024-00241-7,Java
+Terasi,Fish and shrimp,"Ripening, grinding or pounding, and sun-drying fish and/or shrimp with salt",Staphylococcus piscifermantans,10.20961/jaht.v1i2.473,"Cirebon, Langkat, Aceh"
+Urutan,"Pork meat and pork fat (60:40), spices, salt; pig intestine casing","Sausage sun-dried for 3-5 days, then stored at room temperature for spontaneous fermentation","Pediococcus cerevicease, Lactobacillus plantarum, Lactobacillus farciminis, Pediococcus acidilactici",10.20961/jaht.v1i2.473,Bali
+Budik,Pork blood,,,10.20961/jaht.v1i2.473,"Rote, Kupang, Timor"
+Bekasam,"Fish: teri, nila, saluang, wader, sepat siam, kurisi, bandeng","Spontaneous anaerobic fermentation with salt and a carbohydrate source (cooked rice, roasted rice, tapai ketan, flour, or cassava)",Lactobacillus plantarum,10.20961/jaht.v1i2.473,"South Sumatra, South Kalimantan"
+Naniura,"Common carp (ikan mas), andaliman, jeruk batak (unte jugga), kecombrang, candlenut, turmeric, ginger",Raw fish marinated in jeruk jugga or another acid for several hours without cooking,"Lactobacillus sp. 1, Lactobacillus sp. 2, Lactobacillus sp. 3",10.20961/jaht.v1i2.473,"Toba, North Sumatra"
+Bebontot/buntilan,"Pork, chicken, or beef; spices",Natural fermentation without a defined lactic acid bacteria starter; spiced meat wrapped in banana leaves and dried for 4-5 days,"Lactobacillus plantarum, Pediococcus pentosaceus, Pediococcus acidilactici",10.20961/jaht.v1i2.473,Bali
+Ikan Peda,Mackerel (Rastrelliger neglectus),Two-stage fermentation with 20-30% salt and drying for at least 6 days,"Lactobacillus plantarum, Lactobacillus curvatus, Lactobacillus murinus, Streptococcus thermophilus",10.20961/jaht.v1i2.473,West Java
