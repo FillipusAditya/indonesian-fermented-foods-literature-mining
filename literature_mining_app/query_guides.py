@@ -2,6 +2,8 @@
 
 import streamlit as st
 
+from i18n import language, tr
+
 GUIDES = {
     "Europe PMC": {
         "description": "Search indexed metadata and available full text. Use uppercase AND, OR, NOT, double quotes for phrases, and parentheses for groups. The default operator is AND.",
@@ -124,16 +126,80 @@ GUIDES = {
     },
 }
 
+GUIDES_IDN = {
+    "Europe PMC": {
+        "description": "Cari metadata terindeks dan teks lengkap yang tersedia. Gunakan AND, OR, NOT dalam huruf besar, tanda kutip ganda untuk frasa, dan tanda kurung untuk kelompok. Operator bakunya adalah AND.",
+        "note": "Ekspresi dikirim sebagai parameter query. Gunakan * untuk akhiran kata.",
+    },
+    "OpenAlex": {
+        "description": "Cari judul, abstrak, teks lengkap, dan kata kunci melalui parameter search. Gunakan AND, OR, NOT dalam huruf besar, tanda kutip, dan tanda kurung; operator bakunya AND. Pencarian menerapkan stemming dan menghapus stop words.",
+        "note": "Masukkan hanya ekspresi, tanpa URL atau awalan search=. Tag bidang Europe PMC tidak didukung. Wildcard memerlukan search.exact, yang tidak digunakan aplikasi ini. Tulis alternatif dengan OR. Kunci API diperlukan setelah halaman cursor pertama; tanpa kunci, gunakan batas 100 artikel atau kurang.",
+    },
+    "Crossref": {
+        "description": "Masukkan teks bibliografi biasa. Crossref mengurutkan hasil berdasarkan relevansi, bukan pencocokan Boolean ketat; AND, OR, NOT, tanda kurung, dan tanda kutip tidak menjamin pencocokan Boolean.",
+        "note": "Aplikasi mengirim query.bibliographic dan membatasi hasil pada artikel jurnal, seperti di notebook. Tidak semua kata dalam kueri harus muncul di setiap hasil. Masukkan teks pencarian saja; parameter filter terpisah tidak tersedia. Email opsional dan disarankan untuk polite pool. Kunci Metadata Plus opsional bagi pelanggan.",
+    },
+    "Semantic Scholar": {
+        "description": "Pencarian bulk mencocokkan judul dan abstrak. Gunakan operator di bawah, bukan sintaks Europe PMC atau PubMed. Spasi berarti AND; gunakan tanda kurung untuk mengelompokkan konsep.",
+        "note": "Aplikasi menggunakan /paper/search/bulk yang mendukung sintaks ini dan pagination token. Teks lengkap tidak dicari. Total hasil berupa perkiraan. Kunci API opsional; permintaan anonim berbagi kapasitas layanan dan dapat dibatasi.",
+    },
+    "PubMed": {
+        "description": "Gunakan AND, OR, NOT dalam huruf besar dan tanda kurung. PubMed mengevaluasi ekspresi Boolean dari kiri ke kanan. Gunakan tag bidang untuk membatasi pencarian dan tanda kutip ganda untuk meminta frasa.",
+        "note": "Wildcard memerlukan setidaknya empat karakter sebelumnya dan menonaktifkan Automatic Term Mapping. Frasa dalam tanda kutip bergantung pada indeks frasa PubMed. Email kontak wajib dalam aplikasi ini untuk mengidentifikasi permintaan E-utilities; kunci API NCBI opsional. Ambil hingga 10.000 artikel per kueri; persempit kueri untuk ekspor lebih besar. Permintaan diberi jeda agar kurang dari tiga per detik, dengan atau tanpa kunci.",
+    },
+    "CORE": {
+        "description": "Cari metadata karya CORE melalui parameter q. Gunakan pencarian bidang, operator Boolean huruf besar, frasa dalam tanda kutip, dan tanda kurung untuk kelompok konsep.",
+        "note": "Kunci API opsional untuk pencarian metadata publik. Aplikasi mengekspor metadata dan abstrak yang tersedia, tanpa mengunduh teks lengkap. CORE menerapkan kuota token sesuai akun; kueri luas dapat menghabiskannya. Permintaan diberi jeda sekitar enam detik.",
+    },
+    "DOAJ": {
+        "description": "Cari metadata artikel akses terbuka dengan sintaks query-string DOAJ. Gunakan AND, OR, NOT dalam huruf besar, tanda kutip untuk frasa, tanda kurung, dan nama bidang seperti bibjson.title atau bibjson.abstract.",
+        "note": "Pencarian publik tidak memerlukan kunci API atau email. Wildcard dan ekspresi reguler dinonaktifkan oleh DOAJ. Pengambilan pencarian dibatasi 1.000 rekaman; persempit kueri atau tetapkan batas paling banyak 1.000. Gunakan data dump DOAJ untuk pengambilan yang lebih besar.",
+    },
+    "Springer Nature": {
+        "description": "Cari API Meta v2 dengan ekspresi q yang ditulis manual. Kata biasa mencari pada bidang yang tersedia. Spasi menggabungkan batasan; gunakan tanda kutip untuk argumen beberapa kata. Batasan yang didukung bergantung pada paket API.",
+        "note": "Kunci Meta API wajib. Aplikasi menggunakan /meta/v2/json, bukan Full Text API. Judul, abstrak, dan metadata lain diekspor jika tersedia dalam paket akses Anda. Jangan menganggap sintaks bidang Europe PMC, Scopus, atau PubMed berlaku di sini.",
+    },
+    "Scopus": {
+        "description": "Gunakan ekspresi advanced search Scopus dengan kode bidang, AND, OR, AND NOT dalam huruf besar, tanda kurung, dan frasa dalam tanda kutip. Ekspresi dikirim ke parameter query Scopus Search.",
+        "note": "Kunci API Elsevier dan hak akses Scopus yang sesuai diperlukan. Token institusi opsional jika disediakan Elsevier. Pagination standar mendukung hingga 5.000 hasil; pagination cursor pelanggan dapat mengambil lebih banyak jika diizinkan. Aplikasi memakai tampilan metadata STANDARD: abstrak dan daftar penulis lengkap mungkin tidak tersedia, dan PDF tidak diambil.",
+    },
+    "arXiv": {
+        "description": "Cari metadata preprint arXiv dengan search_query. Gunakan awalan bidang seperti all:, ti: (judul), abs: (abstrak), au: (penulis), atau cat: (kategori). Operator Boolean adalah AND, OR, dan ANDNOT.",
+        "note": "Kunci API atau email tidak diperlukan. Hasil berupa preprint dan perlu dinilai sesuai konteksnya. Aplikasi mengambil metadata Atom serta tautan abstrak/PDF, tanpa mengunduh PDF. Permintaan diberi jeda setidaknya tiga detik. Aplikasi mendukung hingga 30.000 hasil per kueri; persempit pencarian yang lebih besar.",
+    },
+}
+
+PURPOSE_IDN = {
+    "Either term": "Salah satu istilah", "Group concepts": "Kelompok konsep",
+    "Phrase": "Frasa", "Exclude a term": "Kecualikan istilah",
+    "Title or abstract": "Judul atau abstrak", "Title / abstract": "Judul / abstrak",
+    "Publication years": "Tahun terbit", "Publication dates": "Tanggal terbit",
+    "Open access": "Akses terbuka", "Topic": "Topik",
+    "Food and compound": "Pangan dan senyawa", "Food and region": "Pangan dan wilayah",
+    "AND": "AND", "OR": "OR", "NOT": "NOT",
+    "Word endings": "Akhiran kata", "Fuzzy / proximity": "Kemiripan / kedekatan",
+    "Compounds": "Senyawa", "MeSH term": "Istilah MeSH",
+    "Title": "Judul", "Alternative titles": "Judul alternatif",
+    "Abstract": "Abstrak", "Combine concepts": "Gabungkan konsep",
+    "Abstract phrase": "Frasa abstrak", "Year range": "Rentang tahun",
+    "Plain words": "Kata biasa", "Tagged keyword": "Kata kunci bertag",
+    "Online publication dates": "Tanggal terbit daring",
+    "Title, abstract, keywords": "Judul, abstrak, kata kunci",
+    "All fields": "Semua bidang",
+}
+
 
 def show_query_guide(database: str) -> None:
     guide = GUIDES[database]
-    with st.expander(f"{database} query syntax guide"):
-        st.write(guide["description"])
-        rows = ["| Purpose | Example query |", "| --- | --- |"]
+    localized = GUIDES_IDN[database] if language() == "Indonesia" else guide
+    with st.expander(tr(f"{database} query syntax guide", f"Panduan sintaks kueri {database}")):
+        st.write(localized["description"])
+        rows = [tr("| Purpose | Example query |", "| Tujuan | Contoh kueri |"), "| --- | --- |"]
         for purpose, example in guide["examples"]:
             # Escape the Semantic Scholar OR operator inside Markdown tables.
             example = example.replace("|", "\\|")
-            rows.append(f"| {purpose} | `{example}` |")
+            purpose_label = PURPOSE_IDN.get(purpose, purpose) if language() == "Indonesia" else purpose
+            rows.append(f"| {purpose_label} | `{example}` |")
         st.markdown("\n".join(rows))
-        st.info(guide["note"])
+        st.info(localized["note"])
         st.markdown(guide["links"])
