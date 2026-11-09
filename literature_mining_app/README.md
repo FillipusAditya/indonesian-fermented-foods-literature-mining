@@ -5,6 +5,15 @@ Semantic Scholar, PubMed, CORE, DOAJ, Springer Nature, Scopus, and arXiv, based 
 `notebooks/literature_mining_api_exploration.ipynb`.
 The interface, query guides, and error messages are in English.
 
+## Navigation
+
+**Indonesia Fermented Food** presents the consolidated inventory from
+`data/clear_fermented_food_inventory.csv`. Search foods, ingredients, microorganisms,
+and references; filter by category; sort and browse food profiles; or download the CSV.
+The page reads the current CSV when it reruns, so edits to the inventory appear after
+refreshing the app. **Tools** contains the literature mining search interface described
+below.
+
 ## Search modes
 
 **Single Database** keeps the native-query workflow for all ten providers.

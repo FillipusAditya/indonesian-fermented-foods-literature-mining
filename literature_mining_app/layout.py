@@ -1,9 +1,19 @@
-"""Shared application heading and responsive styles."""
+"""Shared navigation, heading, and responsive styles."""
+
+from pathlib import Path
 
 import streamlit as st
 
+from i18n import tr
 
-def render_header() -> None:
+
+STYLE_PATH = Path(__file__).with_name("food_inventory.css")
+
+
+def reset_language_widgets() -> None:
+    st.session_state["food_page"] = 1
+
+def render_styles() -> None:
     st.markdown(
         """<style>
         .stApp {--workspace-accent: #14998b;
@@ -12,15 +22,6 @@ def render_header() -> None:
         .stMainBlockContainer > div {gap: .85rem;}
         h1 {letter-spacing: -.045em; font-weight: 750 !important;}
         h3 {font-size: 1.3rem !important; letter-spacing: -.025em; padding-top: .5rem !important;}
-        .st-key-workspace_header {
-            border: 1px solid var(--workspace-line); border-top: 3px solid var(--workspace-accent);
-            border-radius: 20px; padding: 1.7rem 2rem; margin-bottom: .4rem;
-            background: linear-gradient(115deg, rgba(20, 153, 139, .1), transparent);
-        }
-        .st-key-workspace_header h1 {font-size: 2.65rem; padding: .1rem 0 .5rem;}
-        .st-key-workspace_header p {margin-bottom: 0; opacity: .78; max-width: 680px; line-height: 1.6;}
-        .eyebrow {color: var(--workspace-accent); font-size: .72rem; font-weight: 750;
-                  letter-spacing: .16em; margin-bottom: .3rem;}
         [data-testid="stWidgetLabel"] p {font-size: .85rem; font-weight: 550;}
         [data-testid="stCaptionContainer"] p {line-height: 1.4; margin-bottom: 0;}
         [data-testid="stCaptionContainer"] ul {margin-bottom: 0; padding-left: 1.25rem;}
@@ -35,6 +36,12 @@ def render_header() -> None:
         [data-testid="stRadioOption"]:has(input:checked) {
             border-color: var(--workspace-accent);
             background: rgba(20, 153, 139, .1);
+        }
+        [data-testid="stRadioOption"]:has(input:checked) > div > div:first-child {
+            border-color: var(--workspace-accent) !important;
+        }
+        [data-testid="stRadioOption"]:has(input:checked) > div > div:first-child > div {
+            background: var(--workspace-accent) !important;
         }
         [data-testid="stVerticalBlockBorderWrapper"] > div {
             border-color: var(--workspace-line) !important; border-radius: 16px !important;
@@ -69,18 +76,91 @@ def render_header() -> None:
             border: 1px solid var(--workspace-line); border-radius: 14px; padding: 1rem 1.2rem;
         }
         [data-testid="stCode"] {border-radius: 12px;}
+        .st-key-search_mode, .st-key-search_mode_idn {margin-top: 1.1rem;}
+        .st-key-top_nav {
+            border-bottom: 1px solid var(--workspace-line);
+            padding: .15rem 0 .85rem;
+            margin-bottom: .8rem;
+        }
+        .st-key-top_nav > [data-testid="stLayoutWrapper"] > [data-testid="stHorizontalBlock"] {
+            align-items: center; justify-content: space-between; gap: 1rem;
+        }
+        .st-key-top_nav [data-testid="stColumn"]:last-child {
+            display: flex; justify-content: flex-end;
+        }
+        .st-key-main_navigation [role="radiogroup"] {
+            display: flex; gap: .6rem; background: transparent; border: 0;
+        }
+        .st-key-main_navigation button[data-variant="segmented_control"] {
+            border: 1px solid var(--workspace-line); border-radius: 10px !important;
+            padding: .45rem .85rem; min-height: 2.65rem;
+        }
+        .st-key-main_navigation button[data-selected="true"] {
+            border-color: var(--workspace-accent) !important;
+            background: color-mix(in srgb, currentColor 12%, transparent) !important;
+            color: inherit !important;
+        }
+        .st-key-app_language button[data-selected="true"] {
+            border-color: var(--workspace-accent) !important;
+            background: color-mix(in srgb, currentColor 12%, transparent) !important;
+            color: inherit !important;
+        }
+        .st-key-app_language [role="radiogroup"] {gap: .35rem; background: transparent; border: 0;}
+        .st-key-app_language button[data-variant="segmented_control"] {
+            border: 1px solid var(--workspace-line); border-radius: 10px !important;
+            min-height: 2.65rem; padding: .45rem .7rem;
+        }
         @media (max-width: 640px) {
             .stMainBlockContainer {padding: 3rem 1rem 1.5rem;}
-            .st-key-workspace_header {padding: 1.2rem; border-radius: 14px;}
-            .st-key-workspace_header h1 {font-size: 2rem !important;}
             [data-testid="stHorizontalBlock"] {flex-direction: column;}
             [data-testid="stColumn"] {width: 100% !important; flex: 1 1 100% !important;}
+            .st-key-top_nav > [data-testid="stLayoutWrapper"] > [data-testid="stHorizontalBlock"] {
+                flex-direction: row !important; flex-wrap: wrap; gap: .5rem;
+            }
+            .st-key-top_nav [data-testid="stColumn"] {width: auto !important; flex: 0 1 auto !important; min-width: 0;}
+            .st-key-top_nav [data-testid="stColumn"]:last-child {margin-left: auto;}
+            .st-key-main_navigation [role="radiogroup"] {width: auto;}
+            .st-key-main_navigation button[data-variant="segmented_control"] {
+                justify-content: center; text-align: center; font-size: .78rem;
+                padding: .4rem .5rem; white-space: normal;
+            }
+            .st-key-app_language button[data-variant="segmented_control"] {
+                font-size: .78rem; padding: .4rem .45rem;
+            }
             [data-testid="stMarkdownContainer"] code {overflow-wrap: anywhere; white-space: pre-wrap;}
         }
         </style>""",
         unsafe_allow_html=True,
     )
-    with st.container(key="workspace_header"):
-        st.markdown('<div class="eyebrow">RESEARCH WORKSPACE</div>', unsafe_allow_html=True)
-        st.title("Literature mining")
-        st.write("Explore research across databases. Build your search, collect articles, and export the results.")
+    st.markdown(f"<style>{STYLE_PATH.read_text()}</style>", unsafe_allow_html=True)
+
+
+def render_navigation() -> str:
+    with st.container(key="top_nav"):
+        menu, language_choice = st.columns([3, 1], vertical_alignment="center")
+        with menu:
+            selected = st.segmented_control(
+                "Page",
+                ["Indonesia Fermented Food", "Tools"],
+                default="Tools",
+                key="main_navigation",
+                label_visibility="collapsed",
+            )
+        with language_choice:
+            st.segmented_control(
+                "Language / Bahasa", ["English", "Indonesia"],
+                default="English", key="app_language", label_visibility="collapsed",
+                on_change=reset_language_widgets,
+            )
+    return selected or "Tools"
+
+
+def render_header() -> None:
+    st.markdown(
+        '<div class="atlas-hero">'
+        f'<div class="atlas-eyebrow">{tr("RESEARCH WORKSPACE", "RUANG KERJA RISET")}</div>'
+        f'<div class="atlas-title">{tr("Literature Mining", "Penelusuran Literatur")}</div>'
+        f'<p class="atlas-intro">{tr("Explore research across databases. Build your search, collect articles, and export the results.", "Telusuri penelitian dari berbagai basis data. Susun pencarian, kumpulkan artikel, dan ekspor hasilnya.")}</p>'
+        '</div>',
+        unsafe_allow_html=True,
+    )
